@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Josh Comeau's CSS reset
+https://www.joshwcomeau.com/css/custom-css-reset/  */
+
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root, #__next {
+    isolation: isolate;
+}
+
+/* ----------------------------- */
+
+@font-face {
+    font-family: "Norse Bold";
+    src: url(./fonts/norse-bold-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    --green: #596D48;
+}
+
+body {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+#left {
+    width: min(50%, 80rem);
+    min-width: 450px;
+    background-image: url('./images/halie-west-25xggax4bSA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left a,
+#left a:link,
+#left a:hover {
+    color: rgb(249, 250, 251);
+}
+
+#right {
+    background-color: rgb(249, 250, 251);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#right a,
+#right a:link {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 700;
+}
+
+#right a:hover {
+    color: hsl(92, 20%, 55%);
+}
+
+#odin {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-content: center;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    margin: 20rem 0;
+}
+
+#odin img+div {
+    font-family: "Norse Bold", sans-serif;
+    font-size: 8rem;
+}
+
+#img-credit {
+    color: rgb(249, 250, 251);
+    padding: 10px;
+    text-align: center;
+}
+
+#img-credit img {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0 0 2px;
+}
+
+#right-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#right-top>div {
+    font-size: calc(14px + 8 * ((100vw - 320px) / 960));
+    font-weight: bold;
+    max-width: 60ch;
+    padding: 0 4rem;
+}
+
+p+p {
+    margin: 2rem 0;
+}
+
+.white-bg-shadow {
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.100);
+}
+
+form div>h1 {
+    padding: 2rem 0 0 4rem;
+}
+
+label {
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.745);
+    display: block;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgba(35, 57, 185, 0.823);
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.100);
+}
+
+input:user-invalid {
+    border: 1px solid rgba(185, 35, 38, 0.25);
+}
+
+#create {
+    padding: 2rem 4rem;
+    font-weight: 600;
+}
+
+form button {
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+    border: 0;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+}
+
+form button:hover {
+    background-color: hsl(92, 20%, 55%);
+    cursor: pointer;
+}
+
+form button:active {
+    background-color: hsl(92, 20%, 35%);
+}
+
+fieldset {
+    display: flex;
+    border: 0;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    gap: 4rem;
+}
+
+fieldset+fieldset {
+    padding: 2rem 0 0 0;
+}
+
+#fields {
+    padding: 0 0 2em 4em;
+}
